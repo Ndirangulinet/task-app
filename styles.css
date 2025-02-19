@@ -1,24 +1,108 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* css variable  */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --background-dark-color: #10121A;
-    --background-dark-grey: #191D2B;
-    --border-color: #2e344e;
-    --background-light-color: #F1F1F1;
-    --background-light-color-2: rgba(3, 127, 255, 0.3);
-    --white-color: #FFF;
-    --font-light-color: #a4acc4;
+    --primary-color: #bc5ff1;
+    --secondary-color: #f6fbff;
+    --background: #0b1b49;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    background-color: var(--background-dark-color);
-    color: var(--font-light-color);
-    font-size: 1.1rem;
+    background: var(--background);
+    color: var(--secondary-color);
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    /* border: 1px dotted white; */
+    width: 600px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.container .header {
+    background: var(--primary-color);
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.header .icon {
+    margin-right: 30px;
+}
+
+.icon svg {
+    font-size: 1.5em;
+}
+
+
+.container .tasks {
+    background: var(--secondary-color);
+    height: auto;
+    color: #00071d;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.tasks .task-card {
+    padding: 20px 1rem;
+gap: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    /* justify-content: space-around; */
+}
+.tasks .task-card input{
+    flex: 1;
+}
+.tasks .task-card p {
+    flex: 3;
+}
+.tasks .task-card .delete{
+    flex: 1;
+    cursor: pointer;
+    color: rgba(253, 7, 7, 0.466);
+}
+.btn-add {
+    position: absolute;
+    bottom: 18%;
+    right: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 25px;
+    cursor: pointer;
+    width: 160px;
+    height: 50px;
+    font-size: 1em;
+}
+
+.btn-add .btn-icon {
+    margin-right: 10px;
 }
