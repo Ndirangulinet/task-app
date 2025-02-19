@@ -18,30 +18,30 @@
             </div>
 
 
-            <div class="tasks">
-                <div class="task-card">
+            <div class="tasks" id="tasks">
+                <div class="task-card"id="task-card">
                     <input type="checkbox" name="complete" id="complete-task">
-                    <p>Task 1</p>
-                    <div class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
+                    <p>Style guide creation</p>
+                    <div <div id="delete"   class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
                 </div>
                  <div class="task-card">
                     <input type="checkbox" name="complete" id="complete-task">
-                    <p>Task 1</p>
-                    <div class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
+                    <p>Send wireframes</p>
+                    <div <div id="delete"  class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
                 </div>
                  <div class="task-card">
                     <input type="checkbox" name="complete" id="complete-task">
-                    <p>Task 1</p>
-                   <div class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
+                    <p>Readability about page</p>
+                   <div id="delete" class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
                 </div>
                 <div class="task-card">
                     <input type="checkbox" name="complete" id="complete-task">
-                    <p>Task 1</p>
-               <div class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
+                    <p>Check color contrast</p>
+               <div <div id="delete"   class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"/></svg></div>
                 </div>
             </div>
 
-            <button class="btn-add">
+            <button id="btnAdd" class="btn-add">
                 <div class="btn-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h8m0 0h8m-8 0V4m0 8v8"/></svg>
                 </div>
@@ -52,13 +52,15 @@
     </div>
 
     <!-- add task modal  -->
-     <!-- <div class="modal">
-        <form action="#" method="post">
+     <div class="modal"  id="modal">
+        <form  id="task-form" action="#" method="post">
+            <input  type="hidden" name="taskStatus" id="taskStatus" value="incomplete">
             <input type="text" name="task" id="task" placeholder="Enter task">
             <button type="submit">Add Task</button>
         </form>
-     </div> -->
+     </div>
     <!-- js  -->
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
+
 </body>
 </html>

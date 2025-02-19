@@ -1,33 +1,22 @@
-var x =  1;
-var x =  2;
-x =  3;
-console.log(x); // 3
-
-// string
-let name = "John";
-let age = 30;
-
-// concatination
-let msg = "My name is " + name + " and I am " + age + " years old. 1+1";
-let msg1 = `My name is ${name} and I am ${age} years old. ${1+1} `;
-
-const obj  = {
-    city: "New York",
-    greet() {
-        console.log(`Hello, I am from ${this.city}`);
-    }
-}
+// import { addTask, deleteTask, editTask, filterTasks } from "./taskManager.js";
+import { renderTasks, handleFormSubmit, deleteEl } from "./domUtils.js";
 
 
-// console.log(obj['city'])
 
-const button = document.querySelector("button");
+const btnAdd = document.getElementById("btnAdd");
+const modal = document.getElementById("modal");
+
+btnAdd.addEventListener("click", function() {
+    // display the modal
+    modal.style.display = modal.style.display === "block" ? "none" : "block";
+})
 
 
-  function greet() {
-    const name = prompt("What is your name?");
-    const greeting = document.querySelector("#greeting");
-    greeting.textContent = `Hello ${name}, nice to see you!`;
-}
+// initial render
+renderTasks();
 
-button.addEventListener("click", greet);
+//event listener
+document.getElementById("task-form").addEventListener("submit", handleFormSubmit);
+// delete task
+// const deleteEl = document.getElementById("delete");
+document.getElementById("delete").addEventListener("click", deleteEl)
