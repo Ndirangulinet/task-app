@@ -81,8 +81,12 @@ body {
 
 .tasks .task-card p {
     flex: 3;
+    cursor: pointer;/* make task text clikable for editing*/
 }
-
+.tasks .task-card.completed p {
+    text-decoration: line-through; /* Strikethrough for completed tasks */
+    color: #888;
+}
 .tasks .task-card .delete {
     flex: 1;
     cursor: pointer;
@@ -96,7 +100,7 @@ body {
 }
 
 .btn-add {
-    position: absolute;
+    position: static;
     bottom: 18%;
     right: 34%;
     display: flex;
@@ -144,6 +148,8 @@ body {
     gap: 10px;
     margin-bottom: 10px;
     width: 100%;
+    position: relative;
+    right: 2px;
 }
 
 .modal form input {
@@ -166,4 +172,11 @@ body {
     cursor: pointer;
     width: 30%;
     height: 40px;
+}
+modal form #cancel-btn {
+    background: #dc3545; /* Red color for cancel */
+}
+
+.modal form #cancel-btn:hover {
+    background: #c82333;
 }
