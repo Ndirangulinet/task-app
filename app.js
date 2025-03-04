@@ -1,15 +1,12 @@
 // import { addTask, deleteTask, editTask, filterTasks } from "./taskManager.js";
-import { renderTasks, handleFormSubmit, deleteEl } from "./domUtils.js";
+import { renderTasks, handleFormSubmit, deleteEl, editEl } from "./domUtils.js";
 import { toggleTask } from "./taskManager.js";
-
-
 
 const btnAdd = document.getElementById("btnAdd");
 const modal = document.getElementById("modal");
 const taskForm = document.getElementById("task-form");
 const cancelBtn = document.getElementById("cancel-btn");
 const taskList = document.getElementById("tasks");
-
 
 // Initial render
 renderTasks();
@@ -41,4 +38,3 @@ taskList.addEventListener("click", (e) => {
         editEl(id);
     }
 });
-

@@ -49,8 +49,11 @@ export const renderTasks = () => {
 };
 
 export const deleteEl = (id) => {
+    //confirm before deleting
+    if (confirm("Are you sure you want to delete this task?")){
     deleteTask(id);
     renderTasks();
+    }
 };
 
 export const editEl = (id) => {
