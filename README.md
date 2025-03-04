@@ -3,4 +3,3 @@ Add, delete, and view tasks.
 Mark tasks as complete.
 Edit task details.
 Persist data using localStorage
-Cancel tasks
